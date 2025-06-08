@@ -29,7 +29,8 @@
                     <label class="block font-medium text-gray-700 mb-1">Nama Kategori</label>
                     <input type="text" name="nama_kategori"
                         class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 @error('nama_kategori') border-red-500 @enderror"
-                        value="{{ old('nama_kategori') }}">
+                        value="{{ old('nama_kategori') }}"
+                        placeholder="Masukkan nama kategori">
                     @error('nama_kategori')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
@@ -37,7 +38,8 @@
                 <div>
                     <label class="block font-medium text-gray-700 mb-1">Deskripsi</label>
                     <textarea name="deskripsi" rows="3"
-                        class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 @error('deskripsi') border-red-500 @enderror">{{ old('deskripsi') }}</textarea>
+                        class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 @error('deskripsi') border-red-500 @enderror"
+                        placeholder="Masukkan deskripsi kategori">{{ old('deskripsi') }}</textarea>
                     @error('deskripsi')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror

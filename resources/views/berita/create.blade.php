@@ -37,7 +37,8 @@
                     <label class="block font-medium text-gray-700 mb-1">Judul Berita</label>
                     <input type="text" name="judul_berita"
                         class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 @error('judul_berita') border-red-500 @enderror"
-                        value="{{ old('judul_berita') }}">
+                        value="{{ old('judul_berita') }}"
+                        placeholder="Masukkan judul berita">
                     @error('judul_berita')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
@@ -82,7 +83,8 @@
                 <div>
                     <label class="block font-medium text-gray-700 mb-1">Isi Berita</label>
                     <textarea id="editor" name="isi_berita"
-                        class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 @error('isi_berita') border-red-500 @enderror">{{ old('isi_berita') }}</textarea>
+                        class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 @error('isi_berita') border-red-500 @enderror"
+                        placeholder="Masukkan isi berita...">{{ old('isi_berita') }}</textarea>
                     @error('isi_berita')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
@@ -129,3 +131,5 @@
     }
 </script>
 @endpush
+
+

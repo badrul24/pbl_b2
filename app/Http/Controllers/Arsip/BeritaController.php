@@ -30,7 +30,7 @@ class BeritaController extends Controller
             });
         }
 
-        $beritas = $query->latest()->paginate(5)->withQueryString();
+        $beritas = $query->oldest()->paginate(5)->withQueryString();
         return view('berita.index', compact('beritas'));
     }
 
@@ -127,3 +127,4 @@ class BeritaController extends Controller
         return redirect()->route('berita.index')->with('success', 'Berita berhasil dihapus.');
     }
 }
+

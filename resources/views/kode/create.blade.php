@@ -29,7 +29,8 @@
                     <label class="block font-medium text-gray-700 mb-1">Kode</label>
                     <input type="text" name="kode"
                         class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 @error('kode') border-red-500 @enderror"
-                        value="{{ old('kode') }}">
+                        value="{{ old('kode') }}"
+                        placeholder="Masukkan kode klasifikasi">
                     @error('kode')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
@@ -39,7 +40,8 @@
                     <label class="block font-medium text-gray-700 mb-1">Nama Kode</label>
                     <input type="text" name="nama_kode"
                         class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 @error('nama_kode') border-red-500 @enderror"
-                        value="{{ old('nama_kode') }}">
+                        value="{{ old('nama_kode') }}"
+                        placeholder="Masukkan nama kode">
                     @error('nama_kode')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror
@@ -64,7 +66,8 @@
                 <div>
                     <label class="block font-medium text-gray-700 mb-1">Keterangan</label>
                     <textarea name="keterangan" rows="3"
-                        class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 whitespace-normal break-words resize-none @error('keterangan') border-red-500 @enderror">{{ old('keterangan') }}</textarea>
+                        class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 whitespace-normal break-words resize-none @error('keterangan') border-red-500 @enderror"
+                        placeholder="Masukkan keterangan kode">{{ old('keterangan') }}</textarea>
                     @error('keterangan')
                         <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
                     @enderror

@@ -17,7 +17,25 @@ class UserController extends Controller
 
     public function create()
     {
-        return view('auth.register');
+        return view('user.create');
+    }
+
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'name'     => 'required|string|max:255',
+            'email'    => 'required|email|unique:users,email',
+            'password' => 'required|min:8|confirmed',
+        ]);
+
+        User::create([
+            'name'     => $validated['name'],
+            'email'    => $validated['email'],
+            'password' => Hash::make($validated['password']),
+            'email_verified_at' => now()
+        ]);
+
+        return redirect()->route('user.index')->with('success', 'User berhasil ditambahkan.');
     }
 
     public function showRegister()
